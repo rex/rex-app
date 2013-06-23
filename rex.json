@@ -1,0 +1,41 @@
+{
+  "app" : {
+    "name" : "Rex-App Test",
+    "version" : "0.1.0",
+    "root" : "~/Toolbox"
+  },
+  "git" : [
+    "https://github.com/rex/rex-mongo.git",
+    "https://github.com/rex/rex-redis.git",
+    "https://github.com/rex/rex-app.git",
+    "https://github.com/rex/rex-shell.git"
+  ],
+  "foreman" : {
+    "MongoDB" : "sudo mongod",
+    "Redis" : "redis-server",
+    "Rex-App" : {
+      "dir" : "~/Zngine/zngine-pr",
+      "command" : "rex-template -w"
+    },
+    "Data Service" : {
+      "dir" : "~/Zngine/zngine-ds",
+      "command" : "nodemon app.js"
+    }
+  },
+  "npm" : [
+    "rex-template",
+    "nodemon",
+    "grunt-cli"
+  ],
+  "mongo" : {
+    "seedfile" : "~/path/to/import.json"
+  },
+  "bundle" : {
+    
+  },
+  "gems" : [
+    "foreman",
+    "subcontractor",
+    "zurb-foundation"
+  ]
+}

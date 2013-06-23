@@ -1,0 +1,61 @@
+{
+  "author": "Pierce Moore <me@prex.io>",
+  "name": "rex-app",
+  "description": "Amazingly simple full-team cross-platform deployment of web applications of all shapes and sizes.",
+  "homepage": "https://github.com/rex/rex-app",
+  "version": "0.1.0",
+  "main": "lib/rex-app.js",
+  "bin": {
+    "rex-app": "bin/rex-kickstart",
+    "rapp": "bin/rex-kickstart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rex/rex-app.git"
+  },
+  "keywords": [
+    "git",
+    "bundle",
+    "application",
+    "manager",
+    "utility",
+    "cli",
+    "shell",
+    "rex"
+  ],
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "directories": {
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "dependencies": {
+    "rex-exec": "*",
+    "rex-shell": "*",
+    "rex-utils": "*",
+    "rex-git": "*",
+    "rex-template": "*",
+    "rex-mongo" : "*",
+    "npm" : "*",
+    "async": "*"
+  },
+  "config": {
+    "cli" : {
+      "usage" : "rex-app [install|update|start|stop|show]",
+      "args" : {
+        "install" : "Install a new application based on the local rex.json",
+        "update" : "Updates the installed application's git repos and npm modules",
+        "start   " : "Starts the application",
+        "stop   " : "Stops the application",
+        "show   " : "Displays current application status, structure, and versions of all folders, modules, and dependencies.",
+        "verbose" : "See more detailed console logging during activity"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/rex/rex-app/issues"
+  },
+  "scripts": {
+    "test": "node ./test/rex-app.test.js"
+  }
+}
